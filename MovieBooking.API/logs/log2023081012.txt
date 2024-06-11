@@ -1,0 +1,54 @@
+2023-08-10 12:55:14.505 +05:30 [INF] User profile is available. Using 'C:\Users\Dell\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-08-10 12:55:16.425 +05:30 [INF] Now listening on: https://localhost:7167
+2023-08-10 12:55:16.433 +05:30 [INF] Now listening on: http://localhost:5167
+2023-08-10 12:55:16.444 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-10 12:55:16.447 +05:30 [INF] Hosting environment: Development
+2023-08-10 12:55:16.802 +05:30 [INF] Content root path: D:\Downloads\MovieBooking.API\MovieBooking.API\MovieBooking.API\
+2023-08-10 12:55:18.105 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7167/swagger/index.html - -
+2023-08-10 12:55:20.593 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7167/_framework/aspnetcore-browser-refresh.js - -
+2023-08-10 12:55:20.707 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7167/swagger/index.html - - - 200 - text/html;charset=utf-8 2619.9109ms
+2023-08-10 12:55:20.749 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7167/_framework/aspnetcore-browser-refresh.js - - - 200 12002 application/javascript;+charset=utf-8 156.5615ms
+2023-08-10 12:55:21.155 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7167/swagger/v1/swagger.json - -
+2023-08-10 12:55:21.951 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7167/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 796.2250ms
+2023-08-10 12:56:15.594 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7167/api/MovieBooking/Register application/json 158
+2023-08-10 12:56:17.055 +05:30 [INF] Executing endpoint 'MovieBooking.API.Controllers.MovieBookingController.Register (MovieBooking.API)'
+2023-08-10 12:56:17.150 +05:30 [INF] Route matched with {action = "Register", controller = "MovieBooking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Register(MovieBooking.API.Models.DTO.UserDto) on controller MovieBooking.API.Controllers.MovieBookingController (MovieBooking.API).
+2023-08-10 12:56:28.990 +05:30 [INF] Register user : MovieBooking Controller
+2023-08-10 12:56:28.992 +05:30 [DBG] RegisterRequest : MovieBooking.API.Models.DTO.UserDto
+2023-08-10 12:56:30.758 +05:30 [INF] Add new user : User Business
+2023-08-10 12:56:30.767 +05:30 [INF] Get user by loginId and email : user repository
+2023-08-10 12:56:31.424 +05:30 [INF] creating passwordHashsalt : Identity Business
+2023-08-10 12:56:34.673 +05:30 [INF] Add user to role : user repository
+2023-08-10 12:56:34.983 +05:30 [INF] Executing CreatedResult, writing value of type 'System.String'.
+2023-08-10 12:56:34.999 +05:30 [INF] Executed action MovieBooking.API.Controllers.MovieBookingController.Register (MovieBooking.API) in 17834.8718ms
+2023-08-10 12:56:35.012 +05:30 [INF] Executed endpoint 'MovieBooking.API.Controllers.MovieBookingController.Register (MovieBooking.API)'
+2023-08-10 12:56:35.016 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7167/api/MovieBooking/Register application/json 158 - 201 - text/plain;+charset=utf-8 19422.6461ms
+2023-08-10 12:56:56.011 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7167/api/MovieBooking/Login?loginId=admin&password=password - -
+2023-08-10 12:56:56.019 +05:30 [INF] Executing endpoint 'MovieBooking.API.Controllers.MovieBookingController.Login (MovieBooking.API)'
+2023-08-10 12:56:56.053 +05:30 [INF] Route matched with {action = "Login", controller = "MovieBooking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.String]] Login(System.String, System.String) on controller MovieBooking.API.Controllers.MovieBookingController (MovieBooking.API).
+2023-08-10 12:56:56.073 +05:30 [INF] Login user : MovieBooking Controller
+2023-08-10 12:56:56.074 +05:30 [DBG] LoginId : admin, Password: password
+2023-08-10 12:56:56.076 +05:30 [INF] Get user token : User Business
+2023-08-10 12:56:56.080 +05:30 [INF] GetUserByLoginIdPassword: user repository
+2023-08-10 12:56:56.142 +05:30 [INF] Authorizing user : Identity Business
+2023-08-10 12:56:56.145 +05:30 [INF] creating user token : Identity Business
+2023-08-10 12:56:56.910 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-08-10 12:56:56.913 +05:30 [INF] Executed action MovieBooking.API.Controllers.MovieBookingController.Login (MovieBooking.API) in 855.1174ms
+2023-08-10 12:56:56.915 +05:30 [INF] Executed endpoint 'MovieBooking.API.Controllers.MovieBookingController.Login (MovieBooking.API)'
+2023-08-10 12:56:56.916 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7167/api/MovieBooking/Login?loginId=admin&password=password - - - 200 - text/plain;+charset=utf-8 905.2958ms
+2023-08-10 12:58:09.164 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7167/api/MovieBooking/All - -
+2023-08-10 12:58:09.387 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (user)
+2023-08-10 12:58:09.397 +05:30 [INF] AuthenticationScheme: Bearer was forbidden.
+2023-08-10 12:58:09.400 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7167/api/MovieBooking/All - - - 403 0 - 235.0881ms
+2023-08-10 12:59:30.031 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7167/api/MovieBooking/aram/add application/json 105
+2023-08-10 12:59:30.055 +05:30 [INF] Executing endpoint 'MovieBooking.API.Controllers.MovieBookingController.BookTicket (MovieBooking.API)'
+2023-08-10 12:59:30.076 +05:30 [INF] Route matched with {action = "BookTicket", controller = "MovieBooking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] BookTicket(System.String, MovieBooking.API.Models.DTO.TicketBookRequest) on controller MovieBooking.API.Controllers.MovieBookingController (MovieBooking.API).
+2023-08-10 12:59:30.112 +05:30 [INF] Book ticket from MovieBooking Controller
+2023-08-10 12:59:30.114 +05:30 [DBG] moviename: aram, ticket: MovieBooking.API.Models.DTO.TicketBookRequest
+2023-08-10 12:59:30.121 +05:30 [INF] Book movie : ticket business
+2023-08-10 12:59:30.126 +05:30 [INF] Check if movie exists in movie collection : ticket repository
+2023-08-10 12:59:30.287 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2023-08-10 12:59:30.290 +05:30 [INF] Executed action MovieBooking.API.Controllers.MovieBookingController.BookTicket (MovieBooking.API) in 207.4197ms
+2023-08-10 12:59:30.293 +05:30 [INF] Executed endpoint 'MovieBooking.API.Controllers.MovieBookingController.BookTicket (MovieBooking.API)'
+2023-08-10 12:59:30.297 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7167/api/MovieBooking/aram/add application/json 105 - 400 - text/plain;+charset=utf-8 266.2910ms

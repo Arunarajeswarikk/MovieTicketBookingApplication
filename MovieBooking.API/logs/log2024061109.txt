@@ -1,0 +1,504 @@
+2024-06-11 09:33:47.762 +05:30 [ERR] An error occurred while booking ticket
+System.ArgumentException: An item with the same key has already been added. Key: PVR
+   at System.Collections.Generic.Dictionary`2.TryInsert(TKey key, TValue value, InsertionBehavior behavior)
+   at System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+   at MovieBooking.API.Business.TicketBusiness.CheckIfSeatExists(TicketBookRequest ticket) in C:\Users\Administrator\Downloads\MovieBooking.API\MovieBooking.API\MovieBooking.API\MovieBooking.API\Business\TicketBusiness.cs:line 126
+   at MovieBooking.API.Business.TicketBusiness.BookMovieAsync(String moviename, TicketBookRequest ticket) in C:\Users\Administrator\Downloads\MovieBooking.API\MovieBooking.API\MovieBooking.API\MovieBooking.API\Business\TicketBusiness.cs:line 35
+   at MovieBooking.API.Controllers.moviebookingController.BookTicket(String moviename, TicketBookRequest ticket) in C:\Users\Administrator\Downloads\MovieBooking.API\MovieBooking.API\MovieBooking.API\MovieBooking.API\Controllers\moviebookingController.cs:line 169
+2024-06-11 09:33:47.802 +05:30 [INF] Executed action method MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 2663083.5515ms.
+2024-06-11 09:33:47.802 +05:30 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2024-06-11 09:33:47.819 +05:30 [INF] Executed action MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API) in 2663144.9177ms
+2024-06-11 09:33:47.819 +05:30 [INF] Executed endpoint 'MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API)'
+2024-06-11 09:33:47.820 +05:30 [INF] Request finished HTTP/2 POST https://localhost:44355/api/moviebooking/tickets?moviename=Aranmanai application/json 107 - 500 - text/plain;+charset=utf-8 2663147.9658ms
+2024-06-11 09:34:10.861 +05:30 [INF] Request starting HTTP/2 POST https://localhost:44355/api/moviebooking/tickets?moviename=Aranmanai application/json 107
+2024-06-11 09:34:10.861 +05:30 [INF] CORS policy execution successful.
+2024-06-11 09:34:10.862 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '11-06-2024 03:36:13', Current time: '11-06-2024 04:04:10'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateJWS(String token, TokenValidationParameters validationParameters, BaseConfiguration currentConfiguration, SecurityToken& signatureValidatedToken, ExceptionDispatchInfo& exceptionThrown)
+--- End of stack trace from previous location ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, JwtSecurityToken outerToken, TokenValidationParameters validationParameters, SecurityToken& signatureValidatedToken)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2024-06-11 09:34:10.862 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '11-06-2024 03:36:13', Current time: '11-06-2024 04:04:10'.
+2024-06-11 09:34:10.863 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (user)
+2024-06-11 09:34:10.863 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2024-06-11 09:34:10.865 +05:30 [INF] Request finished HTTP/2 POST https://localhost:44355/api/moviebooking/tickets?moviename=Aranmanai application/json 107 - 401 - - 3.9096ms
+2024-06-11 09:34:13.703 +05:30 [INF] Request starting HTTP/2 POST https://localhost:44355/api/moviebooking/tickets?moviename=Aranmanai application/json 107
+2024-06-11 09:34:13.704 +05:30 [INF] CORS policy execution successful.
+2024-06-11 09:34:13.705 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '11-06-2024 03:36:13', Current time: '11-06-2024 04:04:13'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateJWS(String token, TokenValidationParameters validationParameters, BaseConfiguration currentConfiguration, SecurityToken& signatureValidatedToken, ExceptionDispatchInfo& exceptionThrown)
+--- End of stack trace from previous location ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, JwtSecurityToken outerToken, TokenValidationParameters validationParameters, SecurityToken& signatureValidatedToken)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2024-06-11 09:34:13.705 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '11-06-2024 03:36:13', Current time: '11-06-2024 04:04:13'.
+2024-06-11 09:34:13.706 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (user)
+2024-06-11 09:34:13.706 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2024-06-11 09:34:13.708 +05:30 [INF] Request finished HTTP/2 POST https://localhost:44355/api/moviebooking/tickets?moviename=Aranmanai application/json 107 - 401 - - 4.7971ms
+2024-06-11 09:34:38.304 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44355/api/moviebooking/login?loginId=Rajesh86&password=Rajesh%40765 - -
+2024-06-11 09:34:38.305 +05:30 [INF] Executing endpoint 'MovieBooking.API.Controllers.moviebookingController.Login (MovieBooking.API)'
+2024-06-11 09:34:38.307 +05:30 [INF] Route matched with {action = "Login", controller = "moviebooking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.String]] Login(System.String, System.String) on controller MovieBooking.API.Controllers.moviebookingController (MovieBooking.API).
+2024-06-11 09:34:38.330 +05:30 [INF] Executing action method MovieBooking.API.Controllers.moviebookingController.Login (MovieBooking.API) - Validation state: "Valid"
+2024-06-11 09:34:38.330 +05:30 [INF] Login user : MovieBooking Controller
+2024-06-11 09:34:38.330 +05:30 [DBG] LoginId : Rajesh86, Password: Rajesh@765
+2024-06-11 09:34:38.330 +05:30 [INF] Get user token : User Business
+2024-06-11 09:34:38.330 +05:30 [INF] GetUserByLoginIdPassword: user repository
+2024-06-11 09:34:38.356 +05:30 [INF] Authorizing user : Identity Business
+2024-06-11 09:34:38.356 +05:30 [INF] creating user token : Identity Business
+2024-06-11 09:34:38.356 +05:30 [INF] Executed action method MovieBooking.API.Controllers.moviebookingController.Login (MovieBooking.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 26.0954ms.
+2024-06-11 09:34:38.356 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-06-11 09:34:38.357 +05:30 [INF] Executed action MovieBooking.API.Controllers.moviebookingController.Login (MovieBooking.API) in 49.7532ms
+2024-06-11 09:34:38.357 +05:30 [INF] Executed endpoint 'MovieBooking.API.Controllers.moviebookingController.Login (MovieBooking.API)'
+2024-06-11 09:34:38.357 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44355/api/moviebooking/login?loginId=Rajesh86&password=Rajesh%40765 - - - 200 - application/json;+charset=utf-8 53.0016ms
+2024-06-11 09:35:12.079 +05:30 [INF] Request starting HTTP/2 POST https://localhost:44355/api/moviebooking/tickets?moviename=Aranmanai application/json 107
+2024-06-11 09:35:12.080 +05:30 [INF] CORS policy execution successful.
+2024-06-11 09:35:12.081 +05:30 [INF] Executing endpoint 'MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API)'
+2024-06-11 09:35:12.081 +05:30 [INF] Route matched with {action = "BookTicket", controller = "moviebooking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] BookTicket(System.String, MovieBooking.API.Models.DTO.TicketBookRequest) on controller MovieBooking.API.Controllers.moviebookingController (MovieBooking.API).
+2024-06-11 09:35:12.102 +05:30 [INF] Executing action method MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API) - Validation state: "Valid"
+2024-06-11 09:35:14.618 +05:30 [INF] Book ticket from MovieBooking Controller
+2024-06-11 09:35:14.619 +05:30 [DBG] moviename: Aranmanai, ticket: MovieBooking.API.Models.DTO.TicketBookRequest
+2024-06-11 09:35:15.544 +05:30 [INF] Book movie : ticket business
+2024-06-11 09:35:15.545 +05:30 [INF] Check if movie exists in movie collection : ticket repository
+2024-06-11 09:35:15.767 +05:30 [ERR] An error occurred while booking ticket
+System.ArgumentException: An item with the same key has already been added. Key: PVR
+   at System.Collections.Generic.Dictionary`2.TryInsert(TKey key, TValue value, InsertionBehavior behavior)
+   at System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+   at MovieBooking.API.Business.TicketBusiness.CheckIfSeatExists(TicketBookRequest ticket) in C:\Users\Administrator\Downloads\MovieBooking.API\MovieBooking.API\MovieBooking.API\MovieBooking.API\Business\TicketBusiness.cs:line 126
+   at MovieBooking.API.Business.TicketBusiness.BookMovieAsync(String moviename, TicketBookRequest ticket) in C:\Users\Administrator\Downloads\MovieBooking.API\MovieBooking.API\MovieBooking.API\MovieBooking.API\Business\TicketBusiness.cs:line 35
+   at MovieBooking.API.Controllers.moviebookingController.BookTicket(String moviename, TicketBookRequest ticket) in C:\Users\Administrator\Downloads\MovieBooking.API\MovieBooking.API\MovieBooking.API\MovieBooking.API\Controllers\moviebookingController.cs:line 169
+2024-06-11 09:35:15.768 +05:30 [INF] Executed action method MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 3666.2713ms.
+2024-06-11 09:35:15.768 +05:30 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2024-06-11 09:35:15.770 +05:30 [INF] Executed action MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API) in 3687.9067ms
+2024-06-11 09:35:15.770 +05:30 [INF] Executed endpoint 'MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API)'
+2024-06-11 09:35:15.771 +05:30 [INF] Request finished HTTP/2 POST https://localhost:44355/api/moviebooking/tickets?moviename=Aranmanai application/json 107 - 500 - text/plain;+charset=utf-8 3691.9116ms
+2024-06-11 09:35:46.550 +05:30 [INF] Request starting HTTP/2 POST https://localhost:44355/api/moviebooking/tickets?moviename=Aranmanai application/json 107
+2024-06-11 09:35:46.550 +05:30 [INF] CORS policy execution successful.
+2024-06-11 09:35:46.552 +05:30 [INF] Executing endpoint 'MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API)'
+2024-06-11 09:35:46.552 +05:30 [INF] Route matched with {action = "BookTicket", controller = "moviebooking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] BookTicket(System.String, MovieBooking.API.Models.DTO.TicketBookRequest) on controller MovieBooking.API.Controllers.moviebookingController (MovieBooking.API).
+2024-06-11 09:35:46.597 +05:30 [INF] Executing action method MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API) - Validation state: "Valid"
+2024-06-11 09:35:50.375 +05:30 [INF] Book ticket from MovieBooking Controller
+2024-06-11 09:35:50.375 +05:30 [DBG] moviename: Aranmanai, ticket: MovieBooking.API.Models.DTO.TicketBookRequest
+2024-06-11 09:35:53.964 +05:30 [INF] Book movie : ticket business
+2024-06-11 09:35:54.195 +05:30 [INF] Check if movie exists in movie collection : ticket repository
+2024-06-11 09:36:19.403 +05:30 [ERR] An error occurred while booking ticket
+System.ArgumentException: An item with the same key has already been added. Key: PVR
+   at System.Collections.Generic.Dictionary`2.TryInsert(TKey key, TValue value, InsertionBehavior behavior)
+   at System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+   at MovieBooking.API.Business.TicketBusiness.CheckIfSeatExists(TicketBookRequest ticket) in C:\Users\Administrator\Downloads\MovieBooking.API\MovieBooking.API\MovieBooking.API\MovieBooking.API\Business\TicketBusiness.cs:line 126
+   at MovieBooking.API.Business.TicketBusiness.BookMovieAsync(String moviename, TicketBookRequest ticket) in C:\Users\Administrator\Downloads\MovieBooking.API\MovieBooking.API\MovieBooking.API\MovieBooking.API\Business\TicketBusiness.cs:line 35
+   at MovieBooking.API.Controllers.moviebookingController.BookTicket(String moviename, TicketBookRequest ticket) in C:\Users\Administrator\Downloads\MovieBooking.API\MovieBooking.API\MovieBooking.API\MovieBooking.API\Controllers\moviebookingController.cs:line 169
+2024-06-11 09:36:19.405 +05:30 [INF] Executed action method MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 32807.7332ms.
+2024-06-11 09:36:19.405 +05:30 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2024-06-11 09:36:19.406 +05:30 [INF] Executed action MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API) in 32853.8901ms
+2024-06-11 09:36:19.406 +05:30 [INF] Executed endpoint 'MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API)'
+2024-06-11 09:36:19.406 +05:30 [INF] Request finished HTTP/2 POST https://localhost:44355/api/moviebooking/tickets?moviename=Aranmanai application/json 107 - 500 - text/plain;+charset=utf-8 32856.3185ms
+2024-06-11 09:37:11.165 +05:30 [INF] Request starting HTTP/2 POST https://localhost:44355/api/moviebooking/tickets?moviename=Aranmanai application/json 107
+2024-06-11 09:37:11.166 +05:30 [INF] CORS policy execution successful.
+2024-06-11 09:37:11.166 +05:30 [INF] Executing endpoint 'MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API)'
+2024-06-11 09:37:11.166 +05:30 [INF] Route matched with {action = "BookTicket", controller = "moviebooking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] BookTicket(System.String, MovieBooking.API.Models.DTO.TicketBookRequest) on controller MovieBooking.API.Controllers.moviebookingController (MovieBooking.API).
+2024-06-11 09:37:11.194 +05:30 [INF] Executing action method MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API) - Validation state: "Valid"
+2024-06-11 09:37:12.867 +05:30 [INF] Book ticket from MovieBooking Controller
+2024-06-11 09:37:12.867 +05:30 [DBG] moviename: Aranmanai, ticket: MovieBooking.API.Models.DTO.TicketBookRequest
+2024-06-11 09:37:13.226 +05:30 [INF] Book movie : ticket business
+2024-06-11 09:37:13.226 +05:30 [INF] Check if movie exists in movie collection : ticket repository
+2024-06-11 09:37:13.352 +05:30 [ERR] An error occurred while booking ticket
+System.ArgumentException: An item with the same key has already been added. Key: PVR
+   at System.Collections.Generic.Dictionary`2.TryInsert(TKey key, TValue value, InsertionBehavior behavior)
+   at System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+   at MovieBooking.API.Business.TicketBusiness.CheckIfSeatExists(TicketBookRequest ticket) in C:\Users\Administrator\Downloads\MovieBooking.API\MovieBooking.API\MovieBooking.API\MovieBooking.API\Business\TicketBusiness.cs:line 126
+   at MovieBooking.API.Business.TicketBusiness.BookMovieAsync(String moviename, TicketBookRequest ticket) in C:\Users\Administrator\Downloads\MovieBooking.API\MovieBooking.API\MovieBooking.API\MovieBooking.API\Business\TicketBusiness.cs:line 35
+   at MovieBooking.API.Controllers.moviebookingController.BookTicket(String moviename, TicketBookRequest ticket) in C:\Users\Administrator\Downloads\MovieBooking.API\MovieBooking.API\MovieBooking.API\MovieBooking.API\Controllers\moviebookingController.cs:line 169
+2024-06-11 09:37:13.354 +05:30 [INF] Executed action method MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 2159.6493ms.
+2024-06-11 09:37:13.354 +05:30 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2024-06-11 09:37:13.355 +05:30 [INF] Executed action MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API) in 2188.4382ms
+2024-06-11 09:37:13.355 +05:30 [INF] Executed endpoint 'MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API)'
+2024-06-11 09:37:13.355 +05:30 [INF] Request finished HTTP/2 POST https://localhost:44355/api/moviebooking/tickets?moviename=Aranmanai application/json 107 - 500 - text/plain;+charset=utf-8 2189.5313ms
+2024-06-11 09:37:30.611 +05:30 [INF] Request starting HTTP/2 POST https://localhost:44355/api/moviebooking/tickets?moviename=Aranmanai application/json 109
+2024-06-11 09:37:30.612 +05:30 [INF] CORS policy execution successful.
+2024-06-11 09:37:30.614 +05:30 [INF] Executing endpoint 'MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API)'
+2024-06-11 09:37:30.615 +05:30 [INF] Route matched with {action = "BookTicket", controller = "moviebooking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] BookTicket(System.String, MovieBooking.API.Models.DTO.TicketBookRequest) on controller MovieBooking.API.Controllers.moviebookingController (MovieBooking.API).
+2024-06-11 09:37:30.637 +05:30 [INF] Executing action method MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API) - Validation state: "Valid"
+2024-06-11 09:37:34.541 +05:30 [INF] Book ticket from MovieBooking Controller
+2024-06-11 09:37:34.541 +05:30 [DBG] moviename: Aranmanai, ticket: MovieBooking.API.Models.DTO.TicketBookRequest
+2024-06-11 09:37:34.978 +05:30 [INF] Book movie : ticket business
+2024-06-11 09:37:34.978 +05:30 [INF] Check if movie exists in movie collection : ticket repository
+2024-06-11 09:37:35.207 +05:30 [ERR] An error occurred while booking ticket
+System.ArgumentException: An item with the same key has already been added. Key: PVR
+   at System.Collections.Generic.Dictionary`2.TryInsert(TKey key, TValue value, InsertionBehavior behavior)
+   at System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+   at MovieBooking.API.Business.TicketBusiness.CheckIfSeatExists(TicketBookRequest ticket) in C:\Users\Administrator\Downloads\MovieBooking.API\MovieBooking.API\MovieBooking.API\MovieBooking.API\Business\TicketBusiness.cs:line 126
+   at MovieBooking.API.Business.TicketBusiness.BookMovieAsync(String moviename, TicketBookRequest ticket) in C:\Users\Administrator\Downloads\MovieBooking.API\MovieBooking.API\MovieBooking.API\MovieBooking.API\Business\TicketBusiness.cs:line 35
+   at MovieBooking.API.Controllers.moviebookingController.BookTicket(String moviename, TicketBookRequest ticket) in C:\Users\Administrator\Downloads\MovieBooking.API\MovieBooking.API\MovieBooking.API\MovieBooking.API\Controllers\moviebookingController.cs:line 169
+2024-06-11 09:37:35.209 +05:30 [INF] Executed action method MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 4572.1921ms.
+2024-06-11 09:37:35.209 +05:30 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2024-06-11 09:37:35.210 +05:30 [INF] Executed action MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API) in 4595.0141ms
+2024-06-11 09:37:35.210 +05:30 [INF] Executed endpoint 'MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API)'
+2024-06-11 09:37:35.210 +05:30 [INF] Request finished HTTP/2 POST https://localhost:44355/api/moviebooking/tickets?moviename=Aranmanai application/json 109 - 500 - text/plain;+charset=utf-8 4599.0743ms
+2024-06-11 09:38:22.656 +05:30 [INF] Request starting HTTP/2 POST https://localhost:44355/api/moviebooking/tickets?moviename=Aranmanai application/json 109
+2024-06-11 09:38:22.656 +05:30 [INF] CORS policy execution successful.
+2024-06-11 09:38:22.657 +05:30 [INF] Executing endpoint 'MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API)'
+2024-06-11 09:38:22.658 +05:30 [INF] Route matched with {action = "BookTicket", controller = "moviebooking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] BookTicket(System.String, MovieBooking.API.Models.DTO.TicketBookRequest) on controller MovieBooking.API.Controllers.moviebookingController (MovieBooking.API).
+2024-06-11 09:38:22.683 +05:30 [INF] Executing action method MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API) - Validation state: "Valid"
+2024-06-11 09:38:24.482 +05:30 [INF] Book ticket from MovieBooking Controller
+2024-06-11 09:38:24.482 +05:30 [DBG] moviename: Aranmanai, ticket: MovieBooking.API.Models.DTO.TicketBookRequest
+2024-06-11 09:38:24.931 +05:30 [INF] Book movie : ticket business
+2024-06-11 09:38:24.932 +05:30 [INF] Check if movie exists in movie collection : ticket repository
+2024-06-11 09:38:25.145 +05:30 [ERR] An error occurred while booking ticket
+System.ArgumentException: An item with the same key has already been added. Key: PVR
+   at System.Collections.Generic.Dictionary`2.TryInsert(TKey key, TValue value, InsertionBehavior behavior)
+   at System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+   at MovieBooking.API.Business.TicketBusiness.CheckIfSeatExists(TicketBookRequest ticket) in C:\Users\Administrator\Downloads\MovieBooking.API\MovieBooking.API\MovieBooking.API\MovieBooking.API\Business\TicketBusiness.cs:line 126
+   at MovieBooking.API.Business.TicketBusiness.BookMovieAsync(String moviename, TicketBookRequest ticket) in C:\Users\Administrator\Downloads\MovieBooking.API\MovieBooking.API\MovieBooking.API\MovieBooking.API\Business\TicketBusiness.cs:line 35
+   at MovieBooking.API.Controllers.moviebookingController.BookTicket(String moviename, TicketBookRequest ticket) in C:\Users\Administrator\Downloads\MovieBooking.API\MovieBooking.API\MovieBooking.API\MovieBooking.API\Controllers\moviebookingController.cs:line 169
+2024-06-11 09:38:25.147 +05:30 [INF] Executed action method MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 2464.0229ms.
+2024-06-11 09:38:25.148 +05:30 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2024-06-11 09:38:25.149 +05:30 [INF] Executed action MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API) in 2490.621ms
+2024-06-11 09:38:25.149 +05:30 [INF] Executed endpoint 'MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API)'
+2024-06-11 09:38:25.150 +05:30 [INF] Request finished HTTP/2 POST https://localhost:44355/api/moviebooking/tickets?moviename=Aranmanai application/json 109 - 500 - text/plain;+charset=utf-8 2493.1784ms
+2024-06-11 09:39:54.250 +05:30 [INF] Request starting HTTP/2 POST https://localhost:44355/api/moviebooking/tickets?moviename=Leo application/json 109
+2024-06-11 09:39:54.251 +05:30 [INF] CORS policy execution successful.
+2024-06-11 09:39:54.253 +05:30 [INF] Executing endpoint 'MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API)'
+2024-06-11 09:39:54.253 +05:30 [INF] Route matched with {action = "BookTicket", controller = "moviebooking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] BookTicket(System.String, MovieBooking.API.Models.DTO.TicketBookRequest) on controller MovieBooking.API.Controllers.moviebookingController (MovieBooking.API).
+2024-06-11 09:39:54.300 +05:30 [INF] Executing action method MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API) - Validation state: "Valid"
+2024-06-11 09:39:55.767 +05:30 [INF] Book ticket from MovieBooking Controller
+2024-06-11 09:39:55.767 +05:30 [DBG] moviename: Leo, ticket: MovieBooking.API.Models.DTO.TicketBookRequest
+2024-06-11 09:39:56.038 +05:30 [INF] Book movie : ticket business
+2024-06-11 09:39:56.039 +05:30 [INF] Check if movie exists in movie collection : ticket repository
+2024-06-11 09:39:56.252 +05:30 [ERR] An error occurred while booking ticket
+System.ArgumentException: An item with the same key has already been added. Key: PVR
+   at System.Collections.Generic.Dictionary`2.TryInsert(TKey key, TValue value, InsertionBehavior behavior)
+   at System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+   at MovieBooking.API.Business.TicketBusiness.CheckIfSeatExists(TicketBookRequest ticket) in C:\Users\Administrator\Downloads\MovieBooking.API\MovieBooking.API\MovieBooking.API\MovieBooking.API\Business\TicketBusiness.cs:line 126
+   at MovieBooking.API.Business.TicketBusiness.BookMovieAsync(String moviename, TicketBookRequest ticket) in C:\Users\Administrator\Downloads\MovieBooking.API\MovieBooking.API\MovieBooking.API\MovieBooking.API\Business\TicketBusiness.cs:line 35
+   at MovieBooking.API.Controllers.moviebookingController.BookTicket(String moviename, TicketBookRequest ticket) in C:\Users\Administrator\Downloads\MovieBooking.API\MovieBooking.API\MovieBooking.API\MovieBooking.API\Controllers\moviebookingController.cs:line 169
+2024-06-11 09:39:56.254 +05:30 [INF] Executed action method MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 1953.4063ms.
+2024-06-11 09:39:56.254 +05:30 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2024-06-11 09:39:56.254 +05:30 [INF] Executed action MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API) in 2001.0489ms
+2024-06-11 09:39:56.255 +05:30 [INF] Executed endpoint 'MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API)'
+2024-06-11 09:39:56.255 +05:30 [INF] Request finished HTTP/2 POST https://localhost:44355/api/moviebooking/tickets?moviename=Leo application/json 109 - 500 - text/plain;+charset=utf-8 2004.6609ms
+2024-06-11 09:40:34.987 +05:30 [INF] Request starting HTTP/2 POST https://localhost:44355/api/moviebooking/tickets?moviename=Leo application/json 109
+2024-06-11 09:40:34.987 +05:30 [INF] CORS policy execution successful.
+2024-06-11 09:40:34.987 +05:30 [INF] Executing endpoint 'MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API)'
+2024-06-11 09:40:34.988 +05:30 [INF] Route matched with {action = "BookTicket", controller = "moviebooking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] BookTicket(System.String, MovieBooking.API.Models.DTO.TicketBookRequest) on controller MovieBooking.API.Controllers.moviebookingController (MovieBooking.API).
+2024-06-11 09:40:35.012 +05:30 [INF] Executing action method MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API) - Validation state: "Valid"
+2024-06-11 09:40:36.912 +05:30 [INF] Book ticket from MovieBooking Controller
+2024-06-11 09:40:36.912 +05:30 [DBG] moviename: Leo, ticket: MovieBooking.API.Models.DTO.TicketBookRequest
+2024-06-11 09:40:37.207 +05:30 [INF] Book movie : ticket business
+2024-06-11 09:40:37.208 +05:30 [INF] Check if movie exists in movie collection : ticket repository
+2024-06-11 09:40:37.237 +05:30 [INF] Add ticket to ticket collection : ticket repository
+2024-06-11 09:40:37.248 +05:30 [INF] Executed action method MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 2235.2382ms.
+2024-06-11 09:40:37.248 +05:30 [INF] Executing OkObjectResult, writing value of type 'MovieBooking.API.Models.DTO.TicketBookRequest'.
+2024-06-11 09:40:37.249 +05:30 [INF] Executed action MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API) in 2260.1573ms
+2024-06-11 09:40:37.249 +05:30 [INF] Executed endpoint 'MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API)'
+2024-06-11 09:40:37.249 +05:30 [INF] Request finished HTTP/2 POST https://localhost:44355/api/moviebooking/tickets?moviename=Leo application/json 109 - 200 - application/json;+charset=utf-8 2262.5400ms
+2024-06-11 09:41:08.780 +05:30 [INF] Request starting HTTP/2 POST https://localhost:44355/api/moviebooking/tickets?moviename=Aranmanai application/json 109
+2024-06-11 09:41:08.781 +05:30 [INF] CORS policy execution successful.
+2024-06-11 09:41:08.784 +05:30 [INF] Executing endpoint 'MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API)'
+2024-06-11 09:41:08.784 +05:30 [INF] Route matched with {action = "BookTicket", controller = "moviebooking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] BookTicket(System.String, MovieBooking.API.Models.DTO.TicketBookRequest) on controller MovieBooking.API.Controllers.moviebookingController (MovieBooking.API).
+2024-06-11 09:41:08.811 +05:30 [INF] Executing action method MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API) - Validation state: "Valid"
+2024-06-11 09:41:10.282 +05:30 [INF] Book ticket from MovieBooking Controller
+2024-06-11 09:41:10.283 +05:30 [DBG] moviename: Aranmanai, ticket: MovieBooking.API.Models.DTO.TicketBookRequest
+2024-06-11 09:41:10.588 +05:30 [INF] Book movie : ticket business
+2024-06-11 09:41:10.588 +05:30 [INF] Check if movie exists in movie collection : ticket repository
+2024-06-11 09:41:10.612 +05:30 [INF] Executed action method MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API), returned result Microsoft.AspNetCore.Mvc.BadRequestObjectResult in 1801.1321ms.
+2024-06-11 09:41:10.612 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2024-06-11 09:41:10.613 +05:30 [INF] Executed action MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API) in 1828.6507ms
+2024-06-11 09:41:10.613 +05:30 [INF] Executed endpoint 'MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API)'
+2024-06-11 09:41:10.613 +05:30 [INF] Request finished HTTP/2 POST https://localhost:44355/api/moviebooking/tickets?moviename=Aranmanai application/json 109 - 400 - text/plain;+charset=utf-8 1833.3979ms
+2024-06-11 09:41:23.995 +05:30 [INF] Request starting HTTP/2 POST https://localhost:44355/api/moviebooking/tickets?moviename=Aranmanai application/json 107
+2024-06-11 09:41:23.997 +05:30 [INF] CORS policy execution successful.
+2024-06-11 09:41:23.999 +05:30 [INF] Executing endpoint 'MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API)'
+2024-06-11 09:41:24.000 +05:30 [INF] Route matched with {action = "BookTicket", controller = "moviebooking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] BookTicket(System.String, MovieBooking.API.Models.DTO.TicketBookRequest) on controller MovieBooking.API.Controllers.moviebookingController (MovieBooking.API).
+2024-06-11 09:41:24.028 +05:30 [INF] Executing action method MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API) - Validation state: "Valid"
+2024-06-11 09:41:25.592 +05:30 [INF] Book ticket from MovieBooking Controller
+2024-06-11 09:41:25.593 +05:30 [DBG] moviename: Aranmanai, ticket: MovieBooking.API.Models.DTO.TicketBookRequest
+2024-06-11 09:41:26.165 +05:30 [INF] Book movie : ticket business
+2024-06-11 09:41:26.165 +05:30 [INF] Check if movie exists in movie collection : ticket repository
+2024-06-11 09:41:26.178 +05:30 [INF] Executed action method MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API), returned result Microsoft.AspNetCore.Mvc.BadRequestObjectResult in 2148.8128ms.
+2024-06-11 09:41:26.178 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2024-06-11 09:41:26.178 +05:30 [INF] Executed action MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API) in 2178.6744ms
+2024-06-11 09:41:26.179 +05:30 [INF] Executed endpoint 'MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API)'
+2024-06-11 09:41:26.179 +05:30 [INF] Request finished HTTP/2 POST https://localhost:44355/api/moviebooking/tickets?moviename=Aranmanai application/json 107 - 400 - text/plain;+charset=utf-8 2183.7049ms
+2024-06-11 09:41:37.919 +05:30 [INF] Request starting HTTP/2 POST https://localhost:44355/api/moviebooking/tickets?moviename=Aranmanai application/json 107
+2024-06-11 09:41:37.919 +05:30 [INF] CORS policy execution successful.
+2024-06-11 09:41:37.923 +05:30 [INF] Executing endpoint 'MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API)'
+2024-06-11 09:41:37.923 +05:30 [INF] Route matched with {action = "BookTicket", controller = "moviebooking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] BookTicket(System.String, MovieBooking.API.Models.DTO.TicketBookRequest) on controller MovieBooking.API.Controllers.moviebookingController (MovieBooking.API).
+2024-06-11 09:41:37.950 +05:30 [INF] Executing action method MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API) - Validation state: "Valid"
+2024-06-11 09:41:39.960 +05:30 [INF] Book ticket from MovieBooking Controller
+2024-06-11 09:41:39.960 +05:30 [DBG] moviename: Aranmanai, ticket: MovieBooking.API.Models.DTO.TicketBookRequest
+2024-06-11 09:41:46.566 +05:30 [INF] Book movie : ticket business
+2024-06-11 09:41:46.815 +05:30 [INF] Check if movie exists in movie collection : ticket repository
+2024-06-11 09:42:33.251 +05:30 [INF] Executed action method MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API), returned result Microsoft.AspNetCore.Mvc.BadRequestObjectResult in 55296.8673ms.
+2024-06-11 09:42:33.260 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2024-06-11 09:42:33.264 +05:30 [INF] Executed action MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API) in 55340.2735ms
+2024-06-11 09:42:33.264 +05:30 [INF] Executed endpoint 'MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API)'
+2024-06-11 09:42:33.264 +05:30 [INF] Request finished HTTP/2 POST https://localhost:44355/api/moviebooking/tickets?moviename=Aranmanai application/json 107 - 400 - text/plain;+charset=utf-8 55345.2287ms
+2024-06-11 09:42:49.096 +05:30 [INF] Request starting HTTP/2 POST https://localhost:44355/api/moviebooking/tickets?moviename=Aranmanai application/json 108
+2024-06-11 09:42:49.096 +05:30 [INF] CORS policy execution successful.
+2024-06-11 09:42:49.098 +05:30 [INF] Executing endpoint 'MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API)'
+2024-06-11 09:42:49.098 +05:30 [INF] Route matched with {action = "BookTicket", controller = "moviebooking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] BookTicket(System.String, MovieBooking.API.Models.DTO.TicketBookRequest) on controller MovieBooking.API.Controllers.moviebookingController (MovieBooking.API).
+2024-06-11 09:42:49.121 +05:30 [INF] Executing action method MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API) - Validation state: "Valid"
+2024-06-11 09:42:52.195 +05:30 [INF] Book ticket from MovieBooking Controller
+2024-06-11 09:42:52.195 +05:30 [DBG] moviename: Aranmanai, ticket: MovieBooking.API.Models.DTO.TicketBookRequest
+2024-06-11 09:42:52.559 +05:30 [INF] Book movie : ticket business
+2024-06-11 09:42:52.559 +05:30 [INF] Check if movie exists in movie collection : ticket repository
+2024-06-11 09:43:06.711 +05:30 [ERR] An error occurred while booking ticket
+System.ArgumentException: An item with the same key has already been added. Key: PVR
+   at System.Collections.Generic.Dictionary`2.TryInsert(TKey key, TValue value, InsertionBehavior behavior)
+   at System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+   at MovieBooking.API.Business.TicketBusiness.CheckIfSeatExists(TicketBookRequest ticket) in C:\Users\Administrator\Downloads\MovieBooking.API\MovieBooking.API\MovieBooking.API\MovieBooking.API\Business\TicketBusiness.cs:line 126
+   at MovieBooking.API.Business.TicketBusiness.BookMovieAsync(String moviename, TicketBookRequest ticket) in C:\Users\Administrator\Downloads\MovieBooking.API\MovieBooking.API\MovieBooking.API\MovieBooking.API\Business\TicketBusiness.cs:line 35
+   at MovieBooking.API.Controllers.moviebookingController.BookTicket(String moviename, TicketBookRequest ticket) in C:\Users\Administrator\Downloads\MovieBooking.API\MovieBooking.API\MovieBooking.API\MovieBooking.API\Controllers\moviebookingController.cs:line 169
+2024-06-11 09:43:06.713 +05:30 [INF] Executed action method MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 17592.0833ms.
+2024-06-11 09:43:06.714 +05:30 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2024-06-11 09:43:06.715 +05:30 [INF] Executed action MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API) in 17617.2821ms
+2024-06-11 09:43:06.716 +05:30 [INF] Executed endpoint 'MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API)'
+2024-06-11 09:43:06.716 +05:30 [INF] Request finished HTTP/2 POST https://localhost:44355/api/moviebooking/tickets?moviename=Aranmanai application/json 108 - 500 - text/plain;+charset=utf-8 17620.6690ms
+2024-06-11 09:43:11.021 +05:30 [INF] Request starting HTTP/2 POST https://localhost:44355/api/moviebooking/tickets?moviename=Aranmanai application/json 108
+2024-06-11 09:43:11.021 +05:30 [INF] CORS policy execution successful.
+2024-06-11 09:43:11.022 +05:30 [INF] Executing endpoint 'MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API)'
+2024-06-11 09:43:11.022 +05:30 [INF] Route matched with {action = "BookTicket", controller = "moviebooking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] BookTicket(System.String, MovieBooking.API.Models.DTO.TicketBookRequest) on controller MovieBooking.API.Controllers.moviebookingController (MovieBooking.API).
+2024-06-11 09:43:11.043 +05:30 [INF] Executing action method MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API) - Validation state: "Valid"
+2024-06-11 09:43:16.070 +05:30 [INF] Book ticket from MovieBooking Controller
+2024-06-11 09:43:16.070 +05:30 [DBG] moviename: Aranmanai, ticket: MovieBooking.API.Models.DTO.TicketBookRequest
+2024-06-11 09:43:16.483 +05:30 [INF] Book movie : ticket business
+2024-06-11 09:43:16.484 +05:30 [INF] Check if movie exists in movie collection : ticket repository
+2024-06-11 09:43:24.847 +05:30 [ERR] An error occurred while booking ticket
+System.ArgumentException: An item with the same key has already been added. Key: PVR
+   at System.Collections.Generic.Dictionary`2.TryInsert(TKey key, TValue value, InsertionBehavior behavior)
+   at System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+   at MovieBooking.API.Business.TicketBusiness.CheckIfSeatExists(TicketBookRequest ticket) in C:\Users\Administrator\Downloads\MovieBooking.API\MovieBooking.API\MovieBooking.API\MovieBooking.API\Business\TicketBusiness.cs:line 126
+   at MovieBooking.API.Business.TicketBusiness.BookMovieAsync(String moviename, TicketBookRequest ticket) in C:\Users\Administrator\Downloads\MovieBooking.API\MovieBooking.API\MovieBooking.API\MovieBooking.API\Business\TicketBusiness.cs:line 35
+   at MovieBooking.API.Controllers.moviebookingController.BookTicket(String moviename, TicketBookRequest ticket) in C:\Users\Administrator\Downloads\MovieBooking.API\MovieBooking.API\MovieBooking.API\MovieBooking.API\Controllers\moviebookingController.cs:line 169
+2024-06-11 09:43:24.848 +05:30 [INF] Executed action method MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 13804.9118ms.
+2024-06-11 09:43:24.848 +05:30 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2024-06-11 09:43:24.849 +05:30 [INF] Executed action MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API) in 13826.5929ms
+2024-06-11 09:43:24.849 +05:30 [INF] Executed endpoint 'MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API)'
+2024-06-11 09:43:24.850 +05:30 [INF] Request finished HTTP/2 POST https://localhost:44355/api/moviebooking/tickets?moviename=Aranmanai application/json 108 - 500 - text/plain;+charset=utf-8 13828.6999ms
+2024-06-11 09:43:27.893 +05:30 [INF] Request starting HTTP/2 POST https://localhost:44355/api/moviebooking/tickets?moviename=Aranmanai application/json 108
+2024-06-11 09:43:27.893 +05:30 [INF] CORS policy execution successful.
+2024-06-11 09:43:27.893 +05:30 [INF] Executing endpoint 'MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API)'
+2024-06-11 09:43:27.893 +05:30 [INF] Route matched with {action = "BookTicket", controller = "moviebooking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] BookTicket(System.String, MovieBooking.API.Models.DTO.TicketBookRequest) on controller MovieBooking.API.Controllers.moviebookingController (MovieBooking.API).
+2024-06-11 09:43:27.946 +05:30 [INF] Executing action method MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API) - Validation state: "Valid"
+2024-06-11 09:43:30.145 +05:30 [INF] Book ticket from MovieBooking Controller
+2024-06-11 09:43:30.145 +05:30 [DBG] moviename: Aranmanai, ticket: MovieBooking.API.Models.DTO.TicketBookRequest
+2024-06-11 09:43:30.419 +05:30 [INF] Book movie : ticket business
+2024-06-11 09:43:30.419 +05:30 [INF] Check if movie exists in movie collection : ticket repository
+2024-06-11 09:43:39.880 +05:30 [ERR] An error occurred while booking ticket
+System.ArgumentException: An item with the same key has already been added. Key: PVR
+   at System.Collections.Generic.Dictionary`2.TryInsert(TKey key, TValue value, InsertionBehavior behavior)
+   at System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+   at MovieBooking.API.Business.TicketBusiness.CheckIfSeatExists(TicketBookRequest ticket) in C:\Users\Administrator\Downloads\MovieBooking.API\MovieBooking.API\MovieBooking.API\MovieBooking.API\Business\TicketBusiness.cs:line 126
+   at MovieBooking.API.Business.TicketBusiness.BookMovieAsync(String moviename, TicketBookRequest ticket) in C:\Users\Administrator\Downloads\MovieBooking.API\MovieBooking.API\MovieBooking.API\MovieBooking.API\Business\TicketBusiness.cs:line 35
+   at MovieBooking.API.Controllers.moviebookingController.BookTicket(String moviename, TicketBookRequest ticket) in C:\Users\Administrator\Downloads\MovieBooking.API\MovieBooking.API\MovieBooking.API\MovieBooking.API\Controllers\moviebookingController.cs:line 169
+2024-06-11 09:43:39.881 +05:30 [INF] Executed action method MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 11935.1327ms.
+2024-06-11 09:43:39.881 +05:30 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2024-06-11 09:43:39.882 +05:30 [INF] Executed action MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API) in 11988.4756ms
+2024-06-11 09:43:39.883 +05:30 [INF] Executed endpoint 'MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API)'
+2024-06-11 09:43:39.883 +05:30 [INF] Request finished HTTP/2 POST https://localhost:44355/api/moviebooking/tickets?moviename=Aranmanai application/json 108 - 500 - text/plain;+charset=utf-8 11990.2120ms
+2024-06-11 09:43:42.645 +05:30 [INF] Request starting HTTP/2 POST https://localhost:44355/api/moviebooking/tickets?moviename=Aranmanai application/json 108
+2024-06-11 09:43:42.645 +05:30 [INF] CORS policy execution successful.
+2024-06-11 09:43:42.646 +05:30 [INF] Executing endpoint 'MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API)'
+2024-06-11 09:43:42.646 +05:30 [INF] Route matched with {action = "BookTicket", controller = "moviebooking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] BookTicket(System.String, MovieBooking.API.Models.DTO.TicketBookRequest) on controller MovieBooking.API.Controllers.moviebookingController (MovieBooking.API).
+2024-06-11 09:43:42.695 +05:30 [INF] Executing action method MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API) - Validation state: "Valid"
+2024-06-11 09:43:44.445 +05:30 [INF] Book ticket from MovieBooking Controller
+2024-06-11 09:43:44.445 +05:30 [DBG] moviename: Aranmanai, ticket: MovieBooking.API.Models.DTO.TicketBookRequest
+2024-06-11 09:43:44.833 +05:30 [INF] Book movie : ticket business
+2024-06-11 09:43:44.833 +05:30 [INF] Check if movie exists in movie collection : ticket repository
+2024-06-11 09:43:45.759 +05:30 [ERR] An error occurred while booking ticket
+System.ArgumentException: An item with the same key has already been added. Key: PVR
+   at System.Collections.Generic.Dictionary`2.TryInsert(TKey key, TValue value, InsertionBehavior behavior)
+   at System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+   at MovieBooking.API.Business.TicketBusiness.CheckIfSeatExists(TicketBookRequest ticket) in C:\Users\Administrator\Downloads\MovieBooking.API\MovieBooking.API\MovieBooking.API\MovieBooking.API\Business\TicketBusiness.cs:line 126
+   at MovieBooking.API.Business.TicketBusiness.BookMovieAsync(String moviename, TicketBookRequest ticket) in C:\Users\Administrator\Downloads\MovieBooking.API\MovieBooking.API\MovieBooking.API\MovieBooking.API\Business\TicketBusiness.cs:line 35
+   at MovieBooking.API.Controllers.moviebookingController.BookTicket(String moviename, TicketBookRequest ticket) in C:\Users\Administrator\Downloads\MovieBooking.API\MovieBooking.API\MovieBooking.API\MovieBooking.API\Controllers\moviebookingController.cs:line 169
+2024-06-11 09:43:45.760 +05:30 [INF] Executed action method MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 3065.2559ms.
+2024-06-11 09:43:45.761 +05:30 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2024-06-11 09:43:45.761 +05:30 [INF] Executed action MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API) in 3114.6091ms
+2024-06-11 09:43:45.761 +05:30 [INF] Executed endpoint 'MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API)'
+2024-06-11 09:43:45.762 +05:30 [INF] Request finished HTTP/2 POST https://localhost:44355/api/moviebooking/tickets?moviename=Aranmanai application/json 108 - 500 - text/plain;+charset=utf-8 3116.7841ms
+2024-06-11 09:43:47.969 +05:30 [INF] Request starting HTTP/2 POST https://localhost:44355/api/moviebooking/tickets?moviename=Aranmanai application/json 108
+2024-06-11 09:43:47.969 +05:30 [INF] CORS policy execution successful.
+2024-06-11 09:43:47.972 +05:30 [INF] Executing endpoint 'MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API)'
+2024-06-11 09:43:47.972 +05:30 [INF] Route matched with {action = "BookTicket", controller = "moviebooking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] BookTicket(System.String, MovieBooking.API.Models.DTO.TicketBookRequest) on controller MovieBooking.API.Controllers.moviebookingController (MovieBooking.API).
+2024-06-11 09:43:47.996 +05:30 [INF] Executing action method MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API) - Validation state: "Valid"
+2024-06-11 09:43:49.215 +05:30 [INF] Book ticket from MovieBooking Controller
+2024-06-11 09:43:49.215 +05:30 [DBG] moviename: Aranmanai, ticket: MovieBooking.API.Models.DTO.TicketBookRequest
+2024-06-11 09:43:50.325 +05:30 [INF] Book movie : ticket business
+2024-06-11 09:43:50.326 +05:30 [INF] Check if movie exists in movie collection : ticket repository
+2024-06-11 09:44:21.737 +05:30 [ERR] An error occurred while booking ticket
+System.ArgumentException: An item with the same key has already been added. Key: PVR
+   at System.Collections.Generic.Dictionary`2.TryInsert(TKey key, TValue value, InsertionBehavior behavior)
+   at System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+   at MovieBooking.API.Business.TicketBusiness.CheckIfSeatExists(TicketBookRequest ticket) in C:\Users\Administrator\Downloads\MovieBooking.API\MovieBooking.API\MovieBooking.API\MovieBooking.API\Business\TicketBusiness.cs:line 126
+   at MovieBooking.API.Business.TicketBusiness.BookMovieAsync(String moviename, TicketBookRequest ticket) in C:\Users\Administrator\Downloads\MovieBooking.API\MovieBooking.API\MovieBooking.API\MovieBooking.API\Business\TicketBusiness.cs:line 35
+   at MovieBooking.API.Controllers.moviebookingController.BookTicket(String moviename, TicketBookRequest ticket) in C:\Users\Administrator\Downloads\MovieBooking.API\MovieBooking.API\MovieBooking.API\MovieBooking.API\Controllers\moviebookingController.cs:line 169
+2024-06-11 09:44:21.738 +05:30 [INF] Executed action method MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 33741.738ms.
+2024-06-11 09:44:21.738 +05:30 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2024-06-11 09:44:21.739 +05:30 [INF] Executed action MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API) in 33766.5279ms
+2024-06-11 09:44:21.739 +05:30 [INF] Executed endpoint 'MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API)'
+2024-06-11 09:44:21.739 +05:30 [INF] Request finished HTTP/2 POST https://localhost:44355/api/moviebooking/tickets?moviename=Aranmanai application/json 108 - 500 - text/plain;+charset=utf-8 33770.4151ms
+2024-06-11 09:47:07.174 +05:30 [INF] Request starting HTTP/2 POST https://localhost:44355/api/moviebooking/tickets?moviename=Aranmanai application/json 107
+2024-06-11 09:47:07.175 +05:30 [INF] CORS policy execution successful.
+2024-06-11 09:47:07.177 +05:30 [INF] Executing endpoint 'MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API)'
+2024-06-11 09:47:07.177 +05:30 [INF] Route matched with {action = "BookTicket", controller = "moviebooking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] BookTicket(System.String, MovieBooking.API.Models.DTO.TicketBookRequest) on controller MovieBooking.API.Controllers.moviebookingController (MovieBooking.API).
+2024-06-11 09:47:09.398 +05:30 [INF] Executing action method MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API) - Validation state: "Valid"
+2024-06-11 09:47:10.185 +05:30 [INF] Book ticket from MovieBooking Controller
+2024-06-11 09:47:10.185 +05:30 [DBG] moviename: Aranmanai, ticket: MovieBooking.API.Models.DTO.TicketBookRequest
+2024-06-11 09:47:11.363 +05:30 [INF] Book movie : ticket business
+2024-06-11 09:47:11.363 +05:30 [INF] Check if movie exists in movie collection : ticket repository
+2024-06-11 09:47:48.026 +05:30 [INF] Executed action method MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API), returned result Microsoft.AspNetCore.Mvc.BadRequestObjectResult in 38627.157ms.
+2024-06-11 09:47:48.026 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2024-06-11 09:47:48.028 +05:30 [INF] Executed action MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API) in 40850.3071ms
+2024-06-11 09:47:48.028 +05:30 [INF] Executed endpoint 'MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API)'
+2024-06-11 09:47:48.028 +05:30 [INF] Request finished HTTP/2 POST https://localhost:44355/api/moviebooking/tickets?moviename=Aranmanai application/json 107 - 400 - text/plain;+charset=utf-8 40854.1678ms
+2024-06-11 09:47:54.741 +05:30 [INF] Request starting HTTP/2 POST https://localhost:44355/api/moviebooking/tickets?moviename=Aranmanai application/json 107
+2024-06-11 09:47:54.741 +05:30 [INF] CORS policy execution successful.
+2024-06-11 09:47:54.742 +05:30 [INF] Executing endpoint 'MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API)'
+2024-06-11 09:47:54.742 +05:30 [INF] Route matched with {action = "BookTicket", controller = "moviebooking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] BookTicket(System.String, MovieBooking.API.Models.DTO.TicketBookRequest) on controller MovieBooking.API.Controllers.moviebookingController (MovieBooking.API).
+2024-06-11 09:47:54.792 +05:30 [INF] Executing action method MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API) - Validation state: "Valid"
+2024-06-11 09:47:56.221 +05:30 [INF] Book ticket from MovieBooking Controller
+2024-06-11 09:47:56.222 +05:30 [DBG] moviename: Aranmanai, ticket: MovieBooking.API.Models.DTO.TicketBookRequest
+2024-06-11 09:47:56.899 +05:30 [INF] Book movie : ticket business
+2024-06-11 09:47:56.899 +05:30 [INF] Check if movie exists in movie collection : ticket repository
+2024-06-11 09:48:22.121 +05:30 [INF] Executed action method MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API), returned result Microsoft.AspNetCore.Mvc.BadRequestObjectResult in 27328.1762ms.
+2024-06-11 09:48:22.124 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2024-06-11 09:48:22.129 +05:30 [INF] Executed action MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API) in 27386.7305ms
+2024-06-11 09:48:22.129 +05:30 [INF] Executed endpoint 'MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API)'
+2024-06-11 09:48:22.130 +05:30 [INF] Request finished HTTP/2 POST https://localhost:44355/api/moviebooking/tickets?moviename=Aranmanai application/json 107 - 400 - text/plain;+charset=utf-8 27388.5006ms
+2024-06-11 09:48:50.949 +05:30 [INF] Request starting HTTP/2 POST https://localhost:44355/api/moviebooking/tickets?moviename=Leo application/json 107
+2024-06-11 09:48:50.950 +05:30 [INF] CORS policy execution successful.
+2024-06-11 09:48:50.952 +05:30 [INF] Executing endpoint 'MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API)'
+2024-06-11 09:48:50.952 +05:30 [INF] Route matched with {action = "BookTicket", controller = "moviebooking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] BookTicket(System.String, MovieBooking.API.Models.DTO.TicketBookRequest) on controller MovieBooking.API.Controllers.moviebookingController (MovieBooking.API).
+2024-06-11 09:48:50.975 +05:30 [INF] Executing action method MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API) - Validation state: "Valid"
+2024-06-11 09:48:52.842 +05:30 [INF] Book ticket from MovieBooking Controller
+2024-06-11 09:48:52.842 +05:30 [DBG] moviename: Leo, ticket: MovieBooking.API.Models.DTO.TicketBookRequest
+2024-06-11 09:48:53.120 +05:30 [INF] Book movie : ticket business
+2024-06-11 09:48:53.120 +05:30 [INF] Check if movie exists in movie collection : ticket repository
+2024-06-11 09:49:06.076 +05:30 [INF] Executed action method MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API), returned result Microsoft.AspNetCore.Mvc.BadRequestObjectResult in 15100.7172ms.
+2024-06-11 09:49:06.077 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2024-06-11 09:49:06.078 +05:30 [INF] Executed action MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API) in 15125.9243ms
+2024-06-11 09:49:06.079 +05:30 [INF] Executed endpoint 'MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API)'
+2024-06-11 09:49:06.079 +05:30 [INF] Request finished HTTP/2 POST https://localhost:44355/api/moviebooking/tickets?moviename=Leo application/json 107 - 400 - text/plain;+charset=utf-8 15129.9279ms
+2024-06-11 09:49:53.239 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44355/api/moviebooking/login?loginId=Yuthika34&password=admin - -
+2024-06-11 09:49:53.241 +05:30 [INF] Executing endpoint 'MovieBooking.API.Controllers.moviebookingController.Login (MovieBooking.API)'
+2024-06-11 09:49:53.243 +05:30 [INF] Route matched with {action = "Login", controller = "moviebooking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.String]] Login(System.String, System.String) on controller MovieBooking.API.Controllers.moviebookingController (MovieBooking.API).
+2024-06-11 09:49:53.266 +05:30 [INF] Executing action method MovieBooking.API.Controllers.moviebookingController.Login (MovieBooking.API) - Validation state: "Valid"
+2024-06-11 09:49:53.266 +05:30 [INF] Login user : MovieBooking Controller
+2024-06-11 09:49:53.266 +05:30 [DBG] LoginId : Yuthika34, Password: admin
+2024-06-11 09:49:53.266 +05:30 [INF] Get user token : User Business
+2024-06-11 09:49:53.266 +05:30 [INF] GetUserByLoginIdPassword: user repository
+2024-06-11 09:49:53.272 +05:30 [INF] Authorizing user : Identity Business
+2024-06-11 09:49:53.273 +05:30 [INF] creating user token : Identity Business
+2024-06-11 09:49:53.319 +05:30 [INF] Executed action method MovieBooking.API.Controllers.moviebookingController.Login (MovieBooking.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 52.8873ms.
+2024-06-11 09:49:53.320 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-06-11 09:49:53.322 +05:30 [INF] Executed action MovieBooking.API.Controllers.moviebookingController.Login (MovieBooking.API) in 78.8697ms
+2024-06-11 09:49:53.322 +05:30 [INF] Executed endpoint 'MovieBooking.API.Controllers.moviebookingController.Login (MovieBooking.API)'
+2024-06-11 09:49:53.339 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44355/api/moviebooking/login?loginId=Yuthika34&password=admin - - - 200 - application/json;+charset=utf-8 99.2371ms
+2024-06-11 09:50:38.654 +05:30 [INF] Request starting HTTP/2 POST https://localhost:44355/api/moviebooking/Aranmanai/add application/json 102
+2024-06-11 09:50:38.655 +05:30 [INF] CORS policy execution successful.
+2024-06-11 09:50:38.656 +05:30 [INF] Executing endpoint 'MovieBooking.API.Controllers.moviebookingController.AddMovie (MovieBooking.API)'
+2024-06-11 09:50:38.657 +05:30 [INF] Route matched with {action = "AddMovie", controller = "moviebooking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddMovie(MovieBooking.API.Models.DTO.MovieDto) on controller MovieBooking.API.Controllers.moviebookingController (MovieBooking.API).
+2024-06-11 09:50:38.696 +05:30 [INF] Executing action method MovieBooking.API.Controllers.moviebookingController.AddMovie (MovieBooking.API) - Validation state: "Valid"
+2024-06-11 09:50:38.696 +05:30 [INF] Add movie : admin controller
+2024-06-11 09:50:38.696 +05:30 [DBG] movie: MovieBooking.API.Models.DTO.MovieDto
+2024-06-11 09:50:38.696 +05:30 [INF] Add movie : admin service
+2024-06-11 09:50:38.696 +05:30 [INF] Add movie to movie collection : admin repository
+2024-06-11 09:50:38.701 +05:30 [INF] Executed action method MovieBooking.API.Controllers.moviebookingController.AddMovie (MovieBooking.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 4.6837ms.
+2024-06-11 09:50:38.701 +05:30 [INF] Executing OkObjectResult, writing value of type 'MovieBooking.API.Models.DTO.MovieResponse'.
+2024-06-11 09:50:38.702 +05:30 [INF] Executed action MovieBooking.API.Controllers.moviebookingController.AddMovie (MovieBooking.API) in 44.9543ms
+2024-06-11 09:50:38.702 +05:30 [INF] Executed endpoint 'MovieBooking.API.Controllers.moviebookingController.AddMovie (MovieBooking.API)'
+2024-06-11 09:50:38.703 +05:30 [INF] Request finished HTTP/2 POST https://localhost:44355/api/moviebooking/Aranmanai/add application/json 102 - 200 - application/json;+charset=utf-8 48.8821ms
+2024-06-11 09:51:29.775 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44355/api/moviebooking/login?loginId=Rajesh86&password=Rajesh%40765 - -
+2024-06-11 09:51:29.775 +05:30 [INF] Executing endpoint 'MovieBooking.API.Controllers.moviebookingController.Login (MovieBooking.API)'
+2024-06-11 09:51:29.775 +05:30 [INF] Route matched with {action = "Login", controller = "moviebooking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.String]] Login(System.String, System.String) on controller MovieBooking.API.Controllers.moviebookingController (MovieBooking.API).
+2024-06-11 09:51:29.812 +05:30 [INF] Executing action method MovieBooking.API.Controllers.moviebookingController.Login (MovieBooking.API) - Validation state: "Valid"
+2024-06-11 09:51:29.812 +05:30 [INF] Login user : MovieBooking Controller
+2024-06-11 09:51:29.812 +05:30 [DBG] LoginId : Rajesh86, Password: Rajesh@765
+2024-06-11 09:51:29.812 +05:30 [INF] Get user token : User Business
+2024-06-11 09:51:29.812 +05:30 [INF] GetUserByLoginIdPassword: user repository
+2024-06-11 09:51:29.833 +05:30 [INF] Authorizing user : Identity Business
+2024-06-11 09:51:29.833 +05:30 [INF] creating user token : Identity Business
+2024-06-11 09:51:29.833 +05:30 [INF] Executed action method MovieBooking.API.Controllers.moviebookingController.Login (MovieBooking.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 21.2978ms.
+2024-06-11 09:51:29.833 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-06-11 09:51:29.834 +05:30 [INF] Executed action MovieBooking.API.Controllers.moviebookingController.Login (MovieBooking.API) in 58.3001ms
+2024-06-11 09:51:29.834 +05:30 [INF] Executed endpoint 'MovieBooking.API.Controllers.moviebookingController.Login (MovieBooking.API)'
+2024-06-11 09:51:29.834 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44355/api/moviebooking/login?loginId=Rajesh86&password=Rajesh%40765 - - - 200 - application/json;+charset=utf-8 59.1879ms
+2024-06-11 09:52:09.147 +05:30 [INF] Request starting HTTP/2 POST https://localhost:44355/api/moviebooking/tickets?moviename=Aranmanai application/json 107
+2024-06-11 09:52:09.147 +05:30 [INF] CORS policy execution successful.
+2024-06-11 09:52:09.149 +05:30 [INF] Executing endpoint 'MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API)'
+2024-06-11 09:52:09.149 +05:30 [INF] Route matched with {action = "BookTicket", controller = "moviebooking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] BookTicket(System.String, MovieBooking.API.Models.DTO.TicketBookRequest) on controller MovieBooking.API.Controllers.moviebookingController (MovieBooking.API).
+2024-06-11 09:52:09.176 +05:30 [INF] Executing action method MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API) - Validation state: "Valid"
+2024-06-11 09:52:10.844 +05:30 [INF] Book ticket from MovieBooking Controller
+2024-06-11 09:52:10.844 +05:30 [DBG] moviename: Aranmanai, ticket: MovieBooking.API.Models.DTO.TicketBookRequest
+2024-06-11 09:52:11.214 +05:30 [INF] Book movie : ticket business
+2024-06-11 09:52:11.214 +05:30 [INF] Check if movie exists in movie collection : ticket repository
+2024-06-11 09:52:13.658 +05:30 [INF] Executed action method MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API), returned result Microsoft.AspNetCore.Mvc.BadRequestObjectResult in 4481.0281ms.
+2024-06-11 09:52:13.658 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2024-06-11 09:52:13.662 +05:30 [INF] Executed action MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API) in 4512.3183ms
+2024-06-11 09:52:13.662 +05:30 [INF] Executed endpoint 'MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API)'
+2024-06-11 09:52:13.662 +05:30 [INF] Request finished HTTP/2 POST https://localhost:44355/api/moviebooking/tickets?moviename=Aranmanai application/json 107 - 400 - text/plain;+charset=utf-8 4514.9430ms
+2024-06-11 09:54:56.530 +05:30 [INF] Request starting HTTP/2 POST https://localhost:44355/api/moviebooking/tickets?moviename=Aranmanai application/json 107
+2024-06-11 09:54:56.531 +05:30 [INF] CORS policy execution successful.
+2024-06-11 09:54:56.532 +05:30 [INF] Executing endpoint 'MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API)'
+2024-06-11 09:54:56.532 +05:30 [INF] Route matched with {action = "BookTicket", controller = "moviebooking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] BookTicket(System.String, MovieBooking.API.Models.DTO.TicketBookRequest) on controller MovieBooking.API.Controllers.moviebookingController (MovieBooking.API).
+2024-06-11 09:54:56.557 +05:30 [INF] Executing action method MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API) - Validation state: "Valid"
+2024-06-11 09:54:58.096 +05:30 [INF] Book ticket from MovieBooking Controller
+2024-06-11 09:54:58.096 +05:30 [DBG] moviename: Aranmanai, ticket: MovieBooking.API.Models.DTO.TicketBookRequest
+2024-06-11 09:54:58.454 +05:30 [INF] Book movie : ticket business
+2024-06-11 09:54:58.454 +05:30 [INF] Check if movie exists in movie collection : ticket repository
+2024-06-11 09:55:00.749 +05:30 [INF] Executed action method MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API), returned result Microsoft.AspNetCore.Mvc.BadRequestObjectResult in 4191.5679ms.
+2024-06-11 09:55:00.749 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2024-06-11 09:55:00.751 +05:30 [INF] Executed action MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API) in 4219.3734ms
+2024-06-11 09:55:00.752 +05:30 [INF] Executed endpoint 'MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API)'
+2024-06-11 09:55:00.752 +05:30 [INF] Request finished HTTP/2 POST https://localhost:44355/api/moviebooking/tickets?moviename=Aranmanai application/json 107 - 400 - text/plain;+charset=utf-8 4222.0446ms
+2024-06-11 09:55:30.254 +05:30 [INF] Request starting HTTP/2 POST https://localhost:44355/api/moviebooking/tickets?moviename=Aranmanai application/json 107
+2024-06-11 09:55:30.255 +05:30 [INF] CORS policy execution successful.
+2024-06-11 09:55:30.255 +05:30 [INF] Executing endpoint 'MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API)'
+2024-06-11 09:55:30.256 +05:30 [INF] Route matched with {action = "BookTicket", controller = "moviebooking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] BookTicket(System.String, MovieBooking.API.Models.DTO.TicketBookRequest) on controller MovieBooking.API.Controllers.moviebookingController (MovieBooking.API).
+2024-06-11 09:55:30.276 +05:30 [INF] Executing action method MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API) - Validation state: "Valid"
+2024-06-11 09:55:31.723 +05:30 [INF] Book ticket from MovieBooking Controller
+2024-06-11 09:55:31.723 +05:30 [DBG] moviename: Aranmanai, ticket: MovieBooking.API.Models.DTO.TicketBookRequest
+2024-06-11 09:55:32.078 +05:30 [INF] Book movie : ticket business
+2024-06-11 09:55:32.079 +05:30 [INF] Check if movie exists in movie collection : ticket repository
+2024-06-11 09:55:34.166 +05:30 [INF] Executed action method MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API), returned result Microsoft.AspNetCore.Mvc.BadRequestObjectResult in 3888.6821ms.
+2024-06-11 09:55:34.167 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2024-06-11 09:55:34.168 +05:30 [INF] Executed action MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API) in 3912.3275ms
+2024-06-11 09:55:34.168 +05:30 [INF] Executed endpoint 'MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API)'
+2024-06-11 09:55:34.169 +05:30 [INF] Request finished HTTP/2 POST https://localhost:44355/api/moviebooking/tickets?moviename=Aranmanai application/json 107 - 400 - text/plain;+charset=utf-8 3914.8653ms
+2024-06-11 09:55:48.066 +05:30 [INF] Request starting HTTP/2 POST https://localhost:44355/api/moviebooking/tickets?moviename=Aranmanai application/json 107
+2024-06-11 09:55:48.066 +05:30 [INF] CORS policy execution successful.
+2024-06-11 09:55:48.067 +05:30 [INF] Executing endpoint 'MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API)'
+2024-06-11 09:55:48.067 +05:30 [INF] Route matched with {action = "BookTicket", controller = "moviebooking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] BookTicket(System.String, MovieBooking.API.Models.DTO.TicketBookRequest) on controller MovieBooking.API.Controllers.moviebookingController (MovieBooking.API).
+2024-06-11 09:55:48.091 +05:30 [INF] Executing action method MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API) - Validation state: "Valid"
+2024-06-11 09:55:49.729 +05:30 [INF] Book ticket from MovieBooking Controller
+2024-06-11 09:55:49.731 +05:30 [DBG] moviename: Aranmanai, ticket: MovieBooking.API.Models.DTO.TicketBookRequest
+2024-06-11 09:55:50.093 +05:30 [INF] Book movie : ticket business
+2024-06-11 09:55:50.093 +05:30 [INF] Check if movie exists in movie collection : ticket repository
+2024-06-11 09:55:51.485 +05:30 [INF] Executed action method MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API), returned result Microsoft.AspNetCore.Mvc.BadRequestObjectResult in 3394.6697ms.
+2024-06-11 09:55:51.486 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2024-06-11 09:55:51.486 +05:30 [INF] Executed action MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API) in 3418.6062ms
+2024-06-11 09:55:51.487 +05:30 [INF] Executed endpoint 'MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API)'
+2024-06-11 09:55:51.488 +05:30 [INF] Request finished HTTP/2 POST https://localhost:44355/api/moviebooking/tickets?moviename=Aranmanai application/json 107 - 400 - text/plain;+charset=utf-8 3422.0583ms
+2024-06-11 09:57:23.377 +05:30 [INF] Request starting HTTP/2 POST https://localhost:44355/api/moviebooking/tickets?moviename=Aranmanai application/json 112
+2024-06-11 09:57:23.378 +05:30 [INF] CORS policy execution successful.
+2024-06-11 09:57:23.380 +05:30 [INF] Executing endpoint 'MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API)'
+2024-06-11 09:57:23.380 +05:30 [INF] Route matched with {action = "BookTicket", controller = "moviebooking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] BookTicket(System.String, MovieBooking.API.Models.DTO.TicketBookRequest) on controller MovieBooking.API.Controllers.moviebookingController (MovieBooking.API).
+2024-06-11 09:57:23.408 +05:30 [INF] Executing action method MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API) - Validation state: "Valid"
+2024-06-11 09:57:24.941 +05:30 [INF] Book ticket from MovieBooking Controller
+2024-06-11 09:57:24.941 +05:30 [DBG] moviename: Aranmanai, ticket: MovieBooking.API.Models.DTO.TicketBookRequest
+2024-06-11 09:57:25.270 +05:30 [INF] Book movie : ticket business
+2024-06-11 09:57:25.271 +05:30 [INF] Check if movie exists in movie collection : ticket repository
+2024-06-11 09:57:26.753 +05:30 [INF] Add ticket to ticket collection : ticket repository
+2024-06-11 09:57:26.796 +05:30 [INF] Executed action method MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 3388.1957ms.
+2024-06-11 09:57:26.796 +05:30 [INF] Executing OkObjectResult, writing value of type 'MovieBooking.API.Models.DTO.TicketBookRequest'.
+2024-06-11 09:57:26.798 +05:30 [INF] Executed action MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API) in 3417.8858ms
+2024-06-11 09:57:26.798 +05:30 [INF] Executed endpoint 'MovieBooking.API.Controllers.moviebookingController.BookTicket (MovieBooking.API)'
+2024-06-11 09:57:26.799 +05:30 [INF] Request finished HTTP/2 POST https://localhost:44355/api/moviebooking/tickets?moviename=Aranmanai application/json 112 - 200 - application/json;+charset=utf-8 3421.5806ms

@@ -1,0 +1,59 @@
+2023-06-25 15:33:54.648 +05:30 [INF] User profile is available. Using 'C:\Users\lenov\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-06-25 15:33:55.126 +05:30 [INF] Now listening on: https://localhost:7167
+2023-06-25 15:33:55.128 +05:30 [INF] Now listening on: http://localhost:5167
+2023-06-25 15:33:55.134 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-06-25 15:33:55.136 +05:30 [INF] Hosting environment: Development
+2023-06-25 15:33:55.138 +05:30 [INF] Content root path: C:\Cognizant\MovieBooking\MovieBookingApp\MovieBooking.API\MovieBooking.API\
+2023-06-25 15:33:57.054 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7167/swagger/index.html - -
+2023-06-25 15:33:58.205 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7167/swagger/index.html - - - 200 - text/html;charset=utf-8 1160.1647ms
+2023-06-25 15:33:58.272 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7167/_framework/aspnetcore-browser-refresh.js - -
+2023-06-25 15:33:58.285 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7167/_framework/aspnetcore-browser-refresh.js - - - 200 12002 application/javascript;+charset=utf-8 12.4348ms
+2023-06-25 15:33:58.511 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7167/swagger/v1/swagger.json - -
+2023-06-25 15:33:58.991 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7167/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 479.7980ms
+2023-06-25 15:34:19.127 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7167/api/Admin/ticket-booked/poojai - -
+2023-06-25 15:34:19.246 +05:30 [INF] Executing endpoint 'MovieBooking.API.Controllers.AdminController.GetNumberOfTicketsBooked (MovieBooking.API)'
+2023-06-25 15:34:19.283 +05:30 [INF] Route matched with {action = "GetNumberOfTicketsBooked", controller = "Admin"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetNumberOfTicketsBooked(System.String) on controller MovieBooking.API.Controllers.AdminController (MovieBooking.API).
+2023-06-25 15:34:19.316 +05:30 [INF] Get number of tickets booked : admin controller
+2023-06-25 15:34:19.318 +05:30 [DBG] moviename: poojai
+2023-06-25 15:34:19.765 +05:30 [INF] Producer kafka initiated : admin repository
+2023-06-25 15:35:40.784 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7167/api/Admin/ticket-available/poojai - -
+2023-06-25 15:35:40.790 +05:30 [INF] Executing endpoint 'MovieBooking.API.Controllers.AdminController.GetNumberOfTicketsAvailable (MovieBooking.API)'
+2023-06-25 15:35:40.805 +05:30 [INF] Route matched with {action = "GetNumberOfTicketsAvailable", controller = "Admin"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetNumberOfTicketsAvailable(System.String) on controller MovieBooking.API.Controllers.AdminController (MovieBooking.API).
+2023-06-25 15:35:40.808 +05:30 [INF] Get number of tickets available : admin controller
+2023-06-25 15:35:40.809 +05:30 [DBG] moviename: poojai
+2023-06-25 15:35:40.811 +05:30 [INF] Producer kafka initiated : admin repository
+2023-06-25 15:52:14.015 +05:30 [INF] User profile is available. Using 'C:\Users\lenov\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-06-25 15:52:14.512 +05:30 [INF] Now listening on: https://localhost:7167
+2023-06-25 15:52:14.516 +05:30 [INF] Now listening on: http://localhost:5167
+2023-06-25 15:52:14.523 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-06-25 15:52:14.525 +05:30 [INF] Hosting environment: Development
+2023-06-25 15:52:14.526 +05:30 [INF] Content root path: C:\Cognizant\MovieBooking\MovieBookingApp\MovieBooking.API\MovieBooking.API\
+2023-06-25 15:52:17.457 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7167/swagger/index.html - -
+2023-06-25 15:52:18.493 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7167/swagger/index.html - - - 200 - text/html;charset=utf-8 1045.5034ms
+2023-06-25 15:52:18.551 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7167/_framework/aspnetcore-browser-refresh.js - -
+2023-06-25 15:52:18.576 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7167/_framework/aspnetcore-browser-refresh.js - - - 200 12002 application/javascript;+charset=utf-8 24.4766ms
+2023-06-25 15:52:19.107 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7167/swagger/favicon-32x32.png - -
+2023-06-25 15:52:19.144 +05:30 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2023-06-25 15:52:19.147 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7167/swagger/favicon-32x32.png - - - 0 628 image/png 39.7603ms
+2023-06-25 15:52:19.282 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7167/swagger/v1/swagger.json - -
+2023-06-25 15:52:19.505 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7167/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 223.1361ms
+2023-06-25 15:54:53.913 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7167/api/Admin/ticket-booked/poojai - -
+2023-06-25 15:54:54.094 +05:30 [INF] Executing endpoint 'MovieBooking.API.Controllers.AdminController.GetNumberOfTicketsBooked (MovieBooking.API)'
+2023-06-25 15:54:54.125 +05:30 [INF] Route matched with {action = "GetNumberOfTicketsBooked", controller = "Admin"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetNumberOfTicketsBooked(System.String) on controller MovieBooking.API.Controllers.AdminController (MovieBooking.API).
+2023-06-25 15:54:54.156 +05:30 [INF] Get number of tickets booked : admin controller
+2023-06-25 15:54:54.157 +05:30 [DBG] moviename: poojai
+2023-06-25 15:54:54.374 +05:30 [INF] Producer kafka initiated : admin repository
+2023-06-25 15:55:17.227 +05:30 [INF] Executing OkObjectResult, writing value of type 'Confluent.Kafka.DeliveryResult`2[[Confluent.Kafka.Null, Confluent.Kafka, Version=2.1.1.0, Culture=neutral, PublicKeyToken=12c514ca49093d1e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2023-06-25 15:55:28.910 +05:30 [INF] Executed action MovieBooking.API.Controllers.AdminController.GetNumberOfTicketsBooked (MovieBooking.API) in 34778.874ms
+2023-06-25 15:55:28.915 +05:30 [INF] Executed endpoint 'MovieBooking.API.Controllers.AdminController.GetNumberOfTicketsBooked (MovieBooking.API)'
+2023-06-25 15:55:28.917 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7167/api/Admin/ticket-booked/poojai - - - 200 - application/json;+charset=utf-8 35003.6442ms
+2023-06-25 15:58:08.477 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7167/api/Admin/ticket-available/poojai - -
+2023-06-25 15:58:08.494 +05:30 [INF] Executing endpoint 'MovieBooking.API.Controllers.AdminController.GetNumberOfTicketsAvailable (MovieBooking.API)'
+2023-06-25 15:58:08.497 +05:30 [INF] Route matched with {action = "GetNumberOfTicketsAvailable", controller = "Admin"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetNumberOfTicketsAvailable(System.String) on controller MovieBooking.API.Controllers.AdminController (MovieBooking.API).
+2023-06-25 15:58:08.500 +05:30 [INF] Get number of tickets available : admin controller
+2023-06-25 15:58:08.501 +05:30 [DBG] moviename: poojai
+2023-06-25 15:58:08.504 +05:30 [INF] Producer kafka initiated : admin repository
+2023-06-25 15:58:44.447 +05:30 [INF] Executing OkObjectResult, writing value of type 'Confluent.Kafka.DeliveryResult`2[[Confluent.Kafka.Null, Confluent.Kafka, Version=2.1.1.0, Culture=neutral, PublicKeyToken=12c514ca49093d1e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2023-06-25 15:58:44.450 +05:30 [INF] Executed action MovieBooking.API.Controllers.AdminController.GetNumberOfTicketsAvailable (MovieBooking.API) in 35950.9345ms
+2023-06-25 15:58:44.453 +05:30 [INF] Executed endpoint 'MovieBooking.API.Controllers.AdminController.GetNumberOfTicketsAvailable (MovieBooking.API)'
+2023-06-25 15:58:44.454 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7167/api/Admin/ticket-available/poojai - - - 200 - application/json;+charset=utf-8 35977.0063ms

@@ -1,0 +1,12 @@
+2023-08-18 21:12:47.645 +05:30 [INF] User profile is available. Using 'C:\Users\Dell\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-08-18 21:12:49.736 +05:30 [INF] Now listening on: https://localhost:7167
+2023-08-18 21:12:49.739 +05:30 [INF] Now listening on: http://localhost:5167
+2023-08-18 21:12:49.752 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-18 21:12:49.754 +05:30 [INF] Hosting environment: Development
+2023-08-18 21:12:49.756 +05:30 [INF] Content root path: D:\Downloads\MovieBooking.API\MovieBooking.API\MovieBooking.API\
+2023-08-18 21:12:51.869 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7167/swagger/index.html - -
+2023-08-18 21:12:53.662 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7167/swagger/index.html - - - 200 - text/html;charset=utf-8 1837.1674ms
+2023-08-18 21:12:53.663 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7167/_framework/aspnetcore-browser-refresh.js - -
+2023-08-18 21:12:53.779 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7167/_framework/aspnetcore-browser-refresh.js - - - 200 12002 application/javascript;+charset=utf-8 116.0719ms
+2023-08-18 21:12:54.723 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7167/swagger/v1/swagger.json - -
+2023-08-18 21:12:55.543 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7167/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 820.2411ms
